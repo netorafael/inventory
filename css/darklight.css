@@ -1,0 +1,81 @@
+/* Estilos base para ambos os modos */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav, .sidebar {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+nav a, .sidebar a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover, .sidebar a:hover, nav a.active, .sidebar a.active {
+    background-color: #0056b3;
+}
+
+/* Estilos específicos para as páginas principais */
+.main-content {
+    margin-left: 220px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Estilos específicos para o modo escuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode .sidebar, body.dark-mode nav {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode nav a, body.dark-mode .sidebar a {
+    color: #e0e0e0;
+}
+
+body.dark-mode nav a.active, body.dark-mode .sidebar a.active {
+    background-color: #333;
+}
+
+body.dark-mode .main-content {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+/* Estilos específicos para o modo claro */
+body.light-mode {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+body.light-mode .sidebar, body.light-mode nav {
+    background-color: #007BFF;
+}
+
+body.light-mode nav a, body.light-mode .sidebar a {
+    color: #fff;
+}
+
+body.light-mode nav a.active, body.light-mode .sidebar a.active {
+    background-color: #0056b3;
+}
+
+body.light-mode .main-content {
+    background-color: #ffffff;
+    color: #000;
+}

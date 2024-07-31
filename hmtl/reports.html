@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatórios</title>
+    <link rel="stylesheet" href="../css/darklight.css">
+    <link rel="stylesheet" href="../css/reports.css"> <!-- Adapte conforme necessário -->
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="home.html">Início</a></li>
+            <li><a href="add.html">Adicionar Produto</a></li>
+            <li><a href="reports.html" class="active">Relatórios</a></li>
+            <li><a href="stock.html">Visualizar Estoque</a></li>
+            <li><a href="config.html">Configurações</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <h1>Relatórios</h1>
+        <div class="reports-section">
+            <p>Aqui você pode visualizar os relatórios gerados.</p>
+        </div>
+    </div>
+  
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.body.classList.add(savedTheme + '-mode');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizar Estoque</title>
+    <link rel="stylesheet" href="../css/darklight.css">
+    <link rel="stylesheet" href="../css/stock.css"> <!-- Adapte conforme necessário -->
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="home.html">Início</a></li>
+            <li><a href="add.html">Adicionar Produto</a></li>
+            <li><a href="reports.html">Relatórios</a></li>
+            <li><a href="stock.html" class="active">Visualizar Estoque</a></li>
+            <li><a href="config.html">Configurações</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <h1>Visualizar Estoque</h1>
+        <div class="stock-section">
+            <p>Aqui você pode visualizar o estoque atual.</p>
+        </div>
+    </div>
+    <script src="../js/darklight.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.body.classList.add(savedTheme + '-mode');
+        });
+    </script>
+</body>
+</html>

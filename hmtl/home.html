@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gerenciamento de Estoque</title>
+    <link rel="stylesheet" href="../css/darklight.css">
+    <link rel="stylesheet" href="../css/home.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="home.html" class="active">Início</a></li>
+            <li><a href="add.html">Adicionar Produto</a></li>
+            <li><a href="stock.html">Visualizar Estoque</a></li>
+            <li><a href="reports.html">Relatórios</a></li>
+            <li><a href="config.html">Configurações</a></li>
+            <li><a href="login.html">Sair</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <h2>Sistema de Gerenciamento de Estoque</h2>
+        <p>Escolha uma das opções abaixo para começar:</p>
+        <div class="button-container">
+            <a href="add.html" class="button">Adicionar Produto</a>
+            <a href="stock.html" class="button">Visualizar Estoque</a>
+            <a href="reports.html" class="button">Relatórios</a>
+            <a href="config.html" class="button">Configurações</a>
+        </div>
+    </div>
+    <script src="../js/darklight.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.body.classList.add(savedTheme + '-mode');
+        });
+    </script>
+</body>
+</html>

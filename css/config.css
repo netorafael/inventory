@@ -1,0 +1,208 @@
+/* Estilos base para ambos os modos */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 200px;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100vh;
+    position: fixed;
+    transition: background-color 0.3s;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+    background-color: #0056b3;
+    padding-left: 10px;
+}
+
+/* Main content */
+.main-content {
+    margin-left: 220px;
+    padding: 20px;
+    box-sizing: border-box;
+    flex: 1;
+}
+
+/* Títulos */
+h1 {
+    text-align: center;
+    margin-top: 0;
+}
+
+/* Formulários */
+.form-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.form-container h1 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="file"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.form-group button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.form-group button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para o modo escuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode .sidebar {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .sidebar ul li a {
+    color: #e0e0e0;
+}
+
+body.dark-mode .sidebar ul li a.active {
+    background-color: #333;
+}
+
+body.dark-mode .main-content {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode .form-container {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .form-group input,
+body.dark-mode .form-group select {
+    background-color: #333;
+    color: #e0e0e0;
+    border: 1px solid #444;
+}
+
+body.dark-mode .form-group button {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+body.dark-mode .form-group button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para o modo claro */
+body.light-mode {
+    background-color: #f0f0f0;
+    color: #000000;
+}
+
+body.light-mode .sidebar {
+    background-color: #007BFF;
+}
+
+body.light-mode .sidebar ul li a {
+    color: #fff;
+}
+
+body.light-mode .sidebar ul li a.active {
+    background-color: #0056b3;
+}
+
+body.light-mode .main-content {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body.light-mode .form-container {
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .form-group input,
+body.light-mode .form-group select {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #ccc;
+}
+
+body.light-mode .form-group button {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+body.light-mode .form-group button:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,68 @@
+/* Estilos base para a página inicial */
+.main-content {
+    margin-left: 220px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Contêiner dos botões */
+.button-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os botões se movam para a linha seguinte se necessário */
+    gap: 10px; /* Espaço entre os botões */
+    justify-content: center; /* Centraliza os botões horizontalmente */
+}
+
+.button {
+    display: block;
+    width: 200px;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para a barra lateral */
+.sidebar {
+    width: 200px;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100vh;
+    position: fixed;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+    background-color: #0056b3;
+    padding-left: 10px;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações</title>
+    <link rel="stylesheet" href="../css/darklight.css">
+    <link rel="stylesheet" href="../css/config.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="home.html">Início</a></li>
+            <li><a href="add.html">Adicionar Produto</a></li>
+            <li><a href="reports.html">Relatórios</a></li>
+            <li><a href="stock.html">Visualizar Estoque</a></li>
+            <li><a href="config.html" class="active">Configurações</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <h1>Configurações</h1>
+        <div class="settings-section">
+            <h2>Perfil</h2>
+            <form id="profile-settings">
+                <div class="form-group">
+                    <label for="username">Nome de Usuário:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Salvar Perfil</button>
+                </div>
+            </form>
+        </div>
+        <div class="settings-section">
+            <h2>Preferências</h2>
+            <form id="preferences-settings">
+                <div class="form-group">
+                    <label for="language">Idioma:</label>
+                    <select id="language" name="language">
+                        <option value="pt-BR">Português (Brasil)</option>
+                        <option value="en-US">Inglês (EUA)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Salvar Preferências</button>
+                </div>
+            </form>
+        </div>
+        <div class="settings-section">
+            <h2>Configurações de Tema</h2>
+            <form id="theme-settings">
+                <div class="form-group">
+                    <label for="theme">Selecione o Tema:</label>
+                    <select id="theme" name="theme">
+                        <option value="light">Claro</option>
+                        <option value="dark">Escuro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button type="button" id="save-theme">Salvar Tema</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="../js/darklight.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.body.classList.add(savedTheme + '-mode');
+
+            // Adiciona funcionalidade ao botão de salvar tema
+            document.getElementById('save-theme').addEventListener('click', () => {
+                const selectedTheme = document.getElementById('theme').value;
+                localStorage.setItem('theme', selectedTheme);
+                document.body.classList.remove('light-mode', 'dark-mode');
+                document.body.classList.add(selectedTheme + '-mode');
+            });
+        });
+    </script>
+</body>
+</html>
